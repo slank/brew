@@ -43,7 +43,7 @@ class MonitoringPlugins < Formula
     ]
 
     system "./configure", *args, *std_configure_args
-    system "make", "install"
+    system "make", "install", "install-root"
     sbin.write_exec_script Dir["#{libexec}/sbin/*"]
   end
 
